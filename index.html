@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-boolzapp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+    <div class="main_container">
+        <header>
+            <div class="container_chat flex">
+                <div class="container_left">
+                    <div class="container_profilo flex">
+                        <div class="avatar_profilo flex">
+                            <img class="avatar" src="img/1.png" alt="Immagine Profilo Personale">
+                            <span class="bold">Stefano</span>
+                        </div>
+                        <div class="icone_profilo flex">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div> <!-- Fine Container Profilo -->
+
+                    <div class="container_notifiche flex">
+                        <div class="icona_attiva_notifiche">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="testo_attiva_notifiche flex_column">
+                            <span class="bold">Ricevi notifiche di nuovi messaggi</span>
+                            <span class="text_underline">Attiva notifiche Desktop</span>
+                        </div>
+                    </div> <!-- Fine Container Notifiche -->
+
+                    <div class="container_tasto_cerca flex">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div> <!-- Fine Container Tasto Cerca-->
+
+                    <div class="container_contatti">
+                        <div class="container_contatto flex">
+                            <div class="avatar_profilo flex">
+                                <img class="avatar" src="img/2.png" alt="Immagine Contatto">
+                            </div>
+                            <div class="flex_column">
+                                <span class="bold">Michela</span>
+                                <p>Ultimo messaggio inviato</p>
+                            </div>
+                            <div class="orario_ultimo_messaggio">
+                                <span> 12:00</span>
+                            </div>
+                        </div> 
+                    </div> <!-- Fine Container Contatti -->
+                </div> <!-- Fine Container Left -->   
+
+
+                <div class="container_right">
+                    <div class="container_profilo flex">
+                        <div class="container_avatar flex">
+                            <img class="avatar" src="img/2.png" alt="Immagine Contatto">
+                        </div>
+                        <div class="container_contatto_chat_attiva flex_column">
+                            <span class="bold">Michela</span>
+                            <p>Ultimo accesso oggi alle 12:00</p>
+                        </div> 
+                        <div class="container_icon flex">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div> <!-- Fine Container Profilo -->
+
+                    <div class="container_conversazione">
+
+                    </div>
+                    <div class="container_invio_messaggio flex">
+                        <i class="fa-regular fa-face-grin"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div> <!-- Fine Container Right -->
+            </div> <!-- Fine Container Chat -->     
+        </header>
+
+        <main>
+
+        </main>    
+    </div> <!-- Fine Main Container -->
+
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
