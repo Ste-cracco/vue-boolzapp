@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
 </head>
-<body>
+<body id="root">
     <div class="main_container">
         <header>
             <div class="container_chat flex">
@@ -45,12 +45,12 @@
                     </div> <!-- Fine Container Tasto Cerca-->
 
                     <div class="container_contatti">
-                        <div class="container_contatto flex">
+                        <div v-for="contatto in contacts" class="container_contatto flex">
                             <div class="avatar_profilo flex">
-                                <img class="avatar" src="img/2.png" alt="Immagine Contatto">
+                                <img class="avatar" :src="img/{{avatar}}" alt="Immagine Contatto">
                             </div>
                             <div class="flex_column">
-                                <span class="bold">Michela</span>
+                                <span class="bold">{{contatto.name}}</span>
                                 <p>Ultimo messaggio inviato</p>
                             </div>
                             <div class="orario_ultimo_messaggio">
