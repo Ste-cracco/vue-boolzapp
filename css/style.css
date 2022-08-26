@@ -139,7 +139,7 @@ main {
   /* CSS Container Contatti */
 
   .container_contatti {
-    overflow-x: auto;
+    overflow-x: scroll;
   }
 
   .container_contatto {

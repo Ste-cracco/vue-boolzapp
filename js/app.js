@@ -45,7 +45,7 @@ const contacts = [
         },
         {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: '3.png',
         visible: true,
         messages: [
                 {
@@ -67,7 +67,7 @@ const contacts = [
         },
         {
         name: 'Alessandro B.',
-        avatar: '_4',
+        avatar: '4.png',
         visible: true,
         messages: [
                 {
@@ -84,7 +84,7 @@ const contacts = [
         },
         {
         name: 'Alessandro L.',
-        avatar: '_5',
+        avatar: '5.png',
         visible: true,
         messages: [
                 {
@@ -101,7 +101,7 @@ const contacts = [
         },
         {
         name: 'Claudia',
-        avatar: '_6',
+        avatar: '6.png',
         visible: true,
         messages: [
                 {
@@ -123,7 +123,7 @@ const contacts = [
         },
         {
         name: 'Federico',
-        avatar: '_7',
+        avatar: '7.png',
         visible: true,
         messages: [
                 {
@@ -140,7 +140,7 @@ const contacts = [
         },
         {
         name: 'Davide',
-        avatar: '_8',
+        avatar: '8.png',
         visible: true,
         messages: [
                 {
@@ -162,8 +162,10 @@ const contacts = [
         }
     ]
 
+   
+
     const app = new Vue ({
-        el: "root",
+        el: "#root",
         data: {
             contacts: contacts
         },
@@ -171,3 +173,5 @@ const contacts = [
 
         }
     })
+
+    console.log(contacts)
