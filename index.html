@@ -84,22 +84,12 @@
                         <div v-for = "(messaggio, index) in contacts[currentIndex].messages"
                              :class = "(messaggio.status === 'sent') ? 'messaggio_utente' : 'messaggio_interlocutore' " >
                             {{ messaggio.message }}
-                        </div>
-                        <!-- <div class="messaggio_utente">
-                            <p>askaksas jgajgadad aah!!<p>
-                        </div>
-                        <div class="messaggio_utente">
-                            <p>askaksas jgajgadad aah!!<p>
-                        </div>
-                        <div class="messaggio_interlocutore">
-                            <p>asdgasdyax  ausydgasu<p>
-                        </div> -->
-                        
-                       
+                        </div>                       
                     </div>
                     <div class="container_invio_messaggio flex">
                         <i class="fa-regular fa-face-grin"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input v-model = "testoInserito" type="text" placeholder="Scrivi un messaggio" 
+                               @keyup.enter = "aggiungiMessaggio()"  >
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div> <!-- Fine Container Right -->

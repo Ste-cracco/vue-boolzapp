@@ -169,16 +169,46 @@ const contacts = [
         data: {
             contacts: contacts,
             currentIndex: 0,
+            testoInserito: ''
         },
         methods: {
-            contattoAttivo (index) {            
-            this.currentIndex = index
-                
-            console.log(this.currentIndex)
+            contattoAttivo (index) {
+                this.currentIndex = index
+                // console.log(this.currentIndex)
             },
+
+            aggiungiMessaggio() {
+                contacts.forEach((el) => {
+                    this.testoInserito = this.testoInserito.trim()
+			        if(this.testoInserito === '') {
+				    return
+                    }
+                    else {
+                        el.messages.push({
+                            date: '10/01/2020 15:50:00',
+                            message: this.testoInserito,
+                            status: 'sent'
+                        })
+                        this.aggiungiRisposta()
+                    }
+                    this.testoInserito = ''
+			    })
+            },
+
+            aggiungiRisposta() {
+                contacts.forEach((el) => {
+                    setTimeout(() => {
+                        el.messages.push({
+                            date: '10/01/2020 15:50:00',
+                            message: 'ok',
+                            status: 'received'
+                        }, 3000)
+                    })
+                })
+            }
+
         }
     })
 
- 
 
-   
+
