@@ -178,33 +178,34 @@ const contacts = [
             },
 
             aggiungiMessaggio() {
-                contacts.forEach((el) => {
+
                     this.testoInserito = this.testoInserito.trim()
 			        if(this.testoInserito === '') {
-				    return
+				        return
                     }
                     else {
-                        el.messages.push({
+                        this.contacts[this.currentIndex].messages.push({
                             date: '10/01/2020 15:50:00',
                             message: this.testoInserito,
                             status: 'sent'
                         })
                         this.aggiungiRisposta()
                     }
+
                     this.testoInserito = ''
-			    })
+			    
             },
 
             aggiungiRisposta() {
-                contacts.forEach((el) => {
-                    setTimeout(() => {
-                        el.messages.push({
-                            date: '10/01/2020 15:50:00',
-                            message: 'ok',
-                            status: 'received'
-                        }, 3000)
+                const actualCurrentIndex = this.currentIndex;                
+                setTimeout(() => {
+                    this.contacts[actualCurrentIndex].messages.push({
+                        date: '10/01/2020 15:50:00',
+                        message: 'ok',
+                        status: 'received'
                     })
-                })
+                }, 3000)
+               
             }
 
         }
