@@ -67,10 +67,10 @@
                 <div class="container_right">
                     <div class="container_profilo flex">
                         <div class="container_avatar flex">
-                            <img class="avatar" src="img/2.png" alt="Immagine Contatto">
+                            <img class="avatar" :src=" 'img/' + contacts[currentIndex].avatar " alt="Immagine Contatto">
                         </div>
                         <div class="container_contatto_chat_attiva flex_column">
-                            <span class="bold">Michela</span>
+                            <span class="bold">{{ contacts[currentIndex].name }}</span>
                             <p>Ultimo accesso oggi alle 12:00</p>
                         </div> 
                         <div class="container_icon flex">
@@ -81,8 +81,9 @@
                     </div> <!-- Fine Container Profilo -->
 
                     <div class="container_conversazione">
-                        <div v-for = "(contatto, index) in arrayMessaggi">
-                            {{ stampaMessaggi() }}
+                        <div v-for = "(messaggio, index) in contacts[currentIndex].messages"
+                             :class = "(messaggio.status === 'sent') ? 'messaggio_utente' : 'messaggio_interlocutore' " >
+                            {{ messaggio.message }}
                         </div>
                         <!-- <div class="messaggio_utente">
                             <p>askaksas jgajgadad aah!!<p>

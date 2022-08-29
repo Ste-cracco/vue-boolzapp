@@ -162,34 +162,20 @@ const contacts = [
         }
     ]
 
-    const arrayMessaggi = []
-   
+// --------------------------------------------------------
 
     const app = new Vue ({
         el: "#root",
         data: {
             contacts: contacts,
-            arrayMessaggi,
             currentIndex: 0,
         },
         methods: {
-            contattoAttivo (index) {             
-                if (index > this.currentIndex) {
-                    this.currentIndex = index
-                } else {
-                    this.currentIndex = index
-                }
-                console.log(this.currentIndex)
+            contattoAttivo (index) {            
+            this.currentIndex = index
+                
+            console.log(this.currentIndex)
             },
-
-            stampaMessaggi () {
-                arrayMessaggi = this.contacts.map((el) => {
-                el.messages.forEach((item) => {
-                return item.message
-                    })                
-                })
-            }            
-        
         }
     })
 
