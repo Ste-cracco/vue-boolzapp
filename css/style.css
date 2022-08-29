@@ -138,8 +138,13 @@ main {
   
   /* CSS Container Contatti */
 
+  .active {
+    background-color: lightgrey;
+  }
+
   .container_contatti {
-    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 65vh;
   }
 
   .container_contatto {
@@ -170,14 +175,41 @@ main {
     width: 65%;
   }
 
+  /* CSS Container Profilo */
   .container_contatto_chat_attiva p {
     color: gray;
   }
 
+  /* Fine CSS Container Profilo  */
+
+  /* CSS Container Conversazione  */
+
   .container_conversazione {
    background-image: url(https://i.pinimg.com/564x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
    height: 72vh;
+   position: relative;
   }
+
+  .messaggio_utente {
+    background-color: #D5F9BA;
+    position: relative;
+    padding: 20px 13px;
+    margin-left: 60%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    border-radius: 5px;    
+  }
+
+  .messaggio_interlocutore {
+    background-color: white;
+    padding: 20px 13px;
+    border-radius: 5px;
+    margin-right: 60%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+  }
+
+  /* Fine CSS Container Conversazione  */
 
   .container_icon {
     margin-left: auto;
