@@ -169,7 +169,10 @@ const contacts = [
         data: {
             contacts: contacts,
             currentIndex: 0,
-            testoInserito: ''
+            messaggioInserito: '',
+            testoInserito: '',
+            test: true
+
         },
         methods: {
             contattoAttivo (index) {
@@ -178,22 +181,19 @@ const contacts = [
             },
 
             aggiungiMessaggio() {
-
-                    this.testoInserito = this.testoInserito.trim()
-			        if(this.testoInserito === '') {
+                    this.messaggioInserito = this.messaggioInserito.trim()
+			        if(this.messaggioInserito === '') {
 				        return
                     }
                     else {
                         this.contacts[this.currentIndex].messages.push({
                             date: '10/01/2020 15:50:00',
-                            message: this.testoInserito,
+                            message: this.messaggioInserito,
                             status: 'sent'
                         })
                         this.aggiungiRisposta()
                     }
-
-                    this.testoInserito = ''
-			    
+                    this.testoInserito = ''			    
             },
 
             aggiungiRisposta() {
@@ -204,8 +204,23 @@ const contacts = [
                         message: 'ok',
                         status: 'received'
                     })
-                }, 3000)
-               
+                }, 1000)               
+            },
+
+            cercaContatto() {
+                const nomeInseritoSpezzettato = this.testoInserito.split('')
+                contacts.forEach((el) => {
+                    const nomeContattoSpezzettato = el.name.split('')
+                    if(nomeInseritoSpezzettato[this.currentIndex] === nomeContattoSpezzettato[this.currentIndex]) {
+                        console.log(true)
+                        return true
+                    } else {
+                        console.log(false)
+                        return false
+                    }
+                })
+
+                
             }
 
         }
