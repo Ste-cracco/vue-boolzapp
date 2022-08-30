@@ -166,6 +166,14 @@ main {
     font-size: 14px;
   }
 
+  .nascondi_contatto {
+    display: none;
+  }
+
+  .mostra_contatto {
+    display: flex;
+  }
+
   /* Fine CSS Container Contatti */
   /* Fine CSS Container Left  */
 

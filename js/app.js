@@ -171,7 +171,6 @@ const contacts = [
             currentIndex: 0,
             messaggioInserito: '',
             testoInserito: '',
-            test: true
 
         },
         methods: {
@@ -206,23 +205,6 @@ const contacts = [
                     })
                 }, 1000)               
             },
-
-            cercaContatto() {
-                const nomeInseritoSpezzettato = this.testoInserito.split('')
-                contacts.forEach((el) => {
-                    const nomeContattoSpezzettato = el.name.split('')
-                    if(nomeInseritoSpezzettato[this.currentIndex] === nomeContattoSpezzettato[this.currentIndex]) {
-                        console.log(true)
-                        return true
-                    } else {
-                        console.log(false)
-                        return false
-                    }
-                })
-
-                
-            }
-
         }
     })
 

@@ -41,15 +41,14 @@
 
                     <div class="container_tasto_cerca flex">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input v-model = "testoInserito" type="text" placeholder="Cerca o inizia una nuova chat"
-                               @keyup.enter = "cercaContatto()">
+                        <input v-model = "testoInserito" type="text" placeholder="Cerca o inizia una nuova chat" >
                     </div> <!-- Fine Container Tasto Cerca-->
 
                     <div class="container_contatti">
                         <div class="container_contatto flex"
                             v-for="(contatto, index) in contacts"
                             @click = "contattoAttivo(index)"
-                            :class = "(index === currentIndex) ? 'active' : '' " > 
+                            :class = "[index === currentIndex ? 'active' : '' , contatto.name.toLowerCase().includes(testoInserito.toLowerCase()) ? 'mostra_contatto' : 'nascondi_contatto']" > 
                             <div class="avatar_profilo flex">
                                 <img class="avatar" :src="'img/'+ contatto.avatar " alt="Immagine Contatto">
                             </div>
