@@ -29,6 +29,7 @@ img {
     font-weight: 600;
 }
 
+
 /* Fine CSS Reset  */
 
 /* Inizio CSS Contenuto  */
@@ -216,6 +217,21 @@ main {
     margin-left: 5%;
     margin-bottom: 10px;
   }
+
+  .messaggio_utente, .messaggio_interlocutore {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .info_messaggio select {    
+    appearance: none;
+  }
+
+  .info_messaggio::after {
+    content: "\25BC";
+  }
+
+
 
   /* Fine CSS Container Conversazione  */
 
